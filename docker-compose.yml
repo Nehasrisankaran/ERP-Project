@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: workmate_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: workmate
+      POSTGRES_PASSWORD: workmate
+      POSTGRES_DB: workmate
+    ports:
+      - "5432:5432"
+    volumes:
+      - workmate_pgdata:/var/lib/postgresql/data
+
+volumes:
+  workmate_pgdata:
