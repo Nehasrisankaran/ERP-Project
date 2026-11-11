@@ -3,3 +3,6 @@ venv/
 __pycache__/
 *.pyc
 .env
+
+# Azure authentication token cache
+**/token_cache.bin
